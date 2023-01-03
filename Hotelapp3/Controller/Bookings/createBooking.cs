@@ -181,8 +181,9 @@ namespace Hotelapp3.Controller.Bookings
             }
             Console.WriteLine("Ange id: ");
             var roomid = Convert.ToInt32( Console.ReadLine());
-            //Console.WriteLine("Ange Area: ");
-            //var areaInput = Console.ReadLine();
+            Console.Clear();
+            //Console.WriteLine("Ange type: ");
+            //var TypeInput = Console.ReadLine();
 
             //dbContext.Room.Add(new Data.Room
             //{
@@ -198,9 +199,10 @@ namespace Hotelapp3.Controller.Bookings
                 Console.WriteLine($"{guest.Id} \t {guest.Name} \t{guest.Lastname} \r{guest.Age}");
             }
             Console.WriteLine("ange guest id");
-            var guestid = Convert.ToInt32(Console.ReadLine());  
-
-           // Console.Clear();
+            var guestid = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("ange guest name");
+            //var guestname= Console.ReadLine();
+           Console.Clear();
             Console.WriteLine(" How many days would you like to book the room?");
             int numberOfDays = Convert.ToInt32(Console.ReadLine());
 
@@ -211,7 +213,7 @@ namespace Hotelapp3.Controller.Bookings
             Console.Write("Mata in slut datum yyyy-MM-dd: ");
             var DateEnd2 = Convert.ToDateTime(Console.ReadLine());
             Console.WriteLine(DateEnd2);
-
+            Console.Clear() ;
 
             //var booking = new Booking();
             //booking.Guest = guestid;

@@ -13,8 +13,10 @@ namespace Hotelapp3.Data
 
         public Room Room { get; set; }
         public int RoomId { get; set; }
+      
         public Guest Guest { get; set; }
         public int GuestId { get; set; }
+ 
         public DateTime DateStart { get; set; }
         public DateTime DateEnd { get; set; }
 

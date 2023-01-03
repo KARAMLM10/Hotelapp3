@@ -28,7 +28,10 @@ namespace Hotelapp3.Controller.Bookings
 
             foreach (var bok in dbContext.Booking.OrderBy(x => x.Id))
             {
-                Console.WriteLine($"\t {bok.DateStart} \t {bok.DateEnd} ");
+                var guest = dbContext.Guest.FirstOrDefault(x => x.Id.Equals(bok.GuestId));
+                var room = dbContext.Room.FirstOrDefault(x => x.Id.Equals(bok.RoomId));
+                Console.WriteLine($"\t {bok.DateStart} \t {bok.DateEnd} \t{bok.GuestId} "
+                   + $"\t{bok.RoomId} \t{guest.Name} \t{room.type} "); 
             }
             //foreach (var guest in dbContext.Guest.OrderBy(x => x.Id))
             //{
