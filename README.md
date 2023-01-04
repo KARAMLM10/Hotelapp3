@@ -9,4 +9,3 @@ PK är inte Null, unik, går inte att ändra på id och den skapas varje gång r
 mina tabeler uppfyller 1-NF
 inga partial dependencies
 Guest_id och Room-ID är primary key och är unik i varje rad.
-
