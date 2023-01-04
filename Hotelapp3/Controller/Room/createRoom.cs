@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hotelapp3.Controller.Room
 {
-    public class createRoom : Interface
+    public class createRoom : Interfaces
     {
         public ApplicationDBContext dbContext { get; set; }
         public createRoom(ApplicationDBContext context)
@@ -21,27 +21,30 @@ namespace Hotelapp3.Controller.Room
             Console.WriteLine("=====================");
             Console.WriteLine("Ange type: ");
             var typeInput = Console.ReadLine();
-            Console.WriteLine("Ange Area: ");
+            Console.WriteLine("Ange beds: ");
             var areaInput = Console.ReadLine();
 
             dbContext.Room.Add(new Data.Room
             {
                 type = typeInput,
-                Area = areaInput
+                beds = areaInput
                 
             });
             dbContext.SaveChanges();
 
-            Console.WriteLine("vill du forsätta tryck på (0) om inte tryck på (9)");
-            var num = Convert.ToInt32(Console.ReadLine());
-            if (num == 0)
-            {
-                return;
-            }
-            else if (num == 9)
-            {
-                Console.WriteLine(Mainmenu.ShowMenu());
-            }
+            //Console.WriteLine("vill du forsätta i Room menu tryck på (0) om inte tryck på (9)");
+            //var num = Convert.ToInt32(Console.ReadLine());
+            //if (num == 0)
+            //{
+            //    return;
+            //}
+            //else if (num == 9)
+            //{
+            //    Console.WriteLine(Mainmenu.ShowMenu());
+            //}
+            Console.WriteLine("press any key to continho");
+            Console.ReadLine();
+
 
         }
 

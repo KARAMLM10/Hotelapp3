@@ -15,8 +15,8 @@ namespace Hotelapp3.Data
         [MaxLength(100)]
         public string type { get; set; }
         [Required]
-        [Range(20, 40)]
-        public string Area { get; set; }
+        //[Range(20, 40)]
+        public string beds { get; set; }
         
     }
 }

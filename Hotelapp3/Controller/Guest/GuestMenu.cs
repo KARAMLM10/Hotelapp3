@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotelapp3.Controller
+namespace Hotelapp3.Controller.Guest
 {
-    public class GuestMenu : Interface
+    public class GuestMenu : Interfaces
     {
         public ApplicationDBContext dbContext { get; set; }
         public GuestMenu(ApplicationDBContext context)
@@ -22,11 +22,11 @@ namespace Hotelapp3.Controller
 
             var appbuilder = new appbuilder();
             var DbContext = appbuilder.appBuilder();
-            bool Main = true;
+            //bool Main = true;
             while (true)
 
             {
-                Console.WriteLine( "1. skapa ny guest");
+                Console.WriteLine("1. skapa ny guest");
                 Console.WriteLine("2. Read all Guests");
                 Console.WriteLine("4. Delete en Guests");
                 Console.WriteLine("3. Update en Guest");
@@ -54,20 +54,21 @@ namespace Hotelapp3.Controller
                     default:
                         break;
                 }
+                break;
             }
-            List<Interface> actions = new List<Interface>();
+            //List<Interfaces> actions = new List<Interfaces>();
 
-            var c = new createGuest(DbContext);
-            var r = new ReadGuest(DbContext);
-            var u = new UpdateGuest(DbContext);
-            var d = new DeletGuest(DbContext);
+            //var c = new createGuest(DbContext);
+            //var r = new ReadGuest(DbContext);
+            //var u = new UpdateGuest(DbContext);
+            //var d = new DeletGuest(DbContext);
 
-            actions.Add(c);
-            actions.Add(r);
-            actions.Add(u);
-            actions.Add(d);
+            //actions.Add(c);
+            //actions.Add(r);
+            //actions.Add(u);
+            //actions.Add(d);
 
-            
+
 
 
         }

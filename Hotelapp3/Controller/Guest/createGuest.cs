@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Hotelapp3.Controller.Guest
 {
-    public class createGuest : Interface
+    public class createGuest : Interfaces
     {
         public ApplicationDBContext dbContext { get; set; }
         public createGuest(ApplicationDBContext context)
@@ -20,7 +20,7 @@ namespace Hotelapp3.Controller.Guest
     
         public void Run()
         {
-            //Console.WriteLine("vad vill du göra?");
+            
 
             Console.WriteLine("1- CREATE en ny person");
             Console.WriteLine("=====================");
@@ -44,16 +44,19 @@ namespace Hotelapp3.Controller.Guest
             });
             dbContext.SaveChanges();
 
-            Console.WriteLine("vill du forsätta tryck på (0) om inte tryck på (9)");
-            var num = Convert.ToInt32(Console.ReadLine());
-            if(num == 0)
-            {
-             return;
-            }
-            else if(num == 9)
-            {
-                Console.WriteLine(Mainmenu.ShowMenu());
-            }
+            //Console.WriteLine("vill du forsätta i guest menu tryck på (0) om inte tryck på (9)");
+            //var num = Convert.ToInt32(Console.ReadLine());
+            //if(num == 0)
+            //{
+            // return;
+            //}
+            //else if(num == 9)
+            //{
+            //    Console.WriteLine(Mainmenu.ShowMenu());
+            //}
+            Console.WriteLine("press any key to continho");
+            Console.ReadLine();
+
 
         }
     }

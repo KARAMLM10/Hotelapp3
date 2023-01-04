@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hotelapp3.Controller.Room
 {
-    public class DeletRoom : Interface
+    public class DeletRoom : Interfaces
     {
         public ApplicationDBContext dbContext { get; set; }
         public DeletRoom(ApplicationDBContext context)
@@ -23,7 +23,7 @@ namespace Hotelapp3.Controller.Room
             foreach (var room in dbContext.Room)
             {
                 Console.WriteLine($"type: {room.type}");
-                Console.WriteLine($"Area: {room.Area}");
+                Console.WriteLine($"beds: {room.beds}");
                 Console.WriteLine("====================");
 
             }
@@ -33,16 +33,19 @@ namespace Hotelapp3.Controller.Room
             var roomToDelete = dbContext.Room.First(p => p.type == roomtypeToDelete);
             dbContext.Room.Remove(roomToDelete);
             dbContext.SaveChanges();
-            Console.WriteLine("vill du forsätta tryck på (0) om inte tryck på (9)");
-            var num = Convert.ToInt32(Console.ReadLine());
-            if (num == 0)
-            {
-                return;
-            }
-            else if (num == 9)
-            {
-                Console.WriteLine(Mainmenu.ShowMenu());
-            }
+            //Console.WriteLine("vill du forsätta i Room menu tryck på (0) om inte tryck på (9)");
+            //var num = Convert.ToInt32(Console.ReadLine());
+            //if (num == 0)
+            //{
+            //    return;
+            //}
+            //else if (num == 9)
+            //{
+            //    Console.WriteLine(Mainmenu.ShowMenu());
+            //}
+            Console.WriteLine("press any key to continho");
+            Console.ReadLine();
+
 
         }
     }

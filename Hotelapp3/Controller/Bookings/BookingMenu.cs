@@ -1,5 +1,5 @@
-﻿using Hotelapp3.Controller.Bookings;
-using Hotelapp3.Controller.Guest;
+﻿using Hotelapp3.Controller.Guest;
+using Hotelapp3.Controller.Bookings;
 using Hotelapp3.Data;
 using System;
 using System.Collections.Generic;
@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotelapp3.Controller
+namespace Hotelapp3.Controller.Bookings
 {
-    public class BookingMenu : Interface
+    public class BookingMenu : Interfaces
     {
 
         public ApplicationDBContext dbContext { get; set; }
@@ -23,7 +23,7 @@ namespace Hotelapp3.Controller
 
             var appbuilder = new appbuilder();
             var DbContext = appbuilder.appBuilder();
-            bool Main = true;
+            // bool Main = true;
             while (true)
             {
                 Console.WriteLine("1- Booka ett Rum");
@@ -40,17 +40,17 @@ namespace Hotelapp3.Controller
                     case 2:
                         var action2 = new ReadBooking(DbContext);
                         action2.Run();
-                        
+
                         break;
                 }
-
+                break;
             }
-            List<Interface> actions = new List<Interface>();
+            //List<Interfaces> actions = new List<Interfaces>();
 
-            var c = new createBooking(DbContext);         
-            var r = new ReadBooking(DbContext);
-            actions.Add(c);
-            actions.Add(r);
+            //var c = new createBooking(DbContext);
+            //var r = new ReadBooking(DbContext);
+            //actions.Add(c);
+            //actions.Add(r);
         }
 
     }

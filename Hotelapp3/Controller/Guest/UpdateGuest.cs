@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hotelapp3.Controller.Guest
 {
-    public class UpdateGuest : Interface
+    public class UpdateGuest : Interfaces
     {
         public ApplicationDBContext dbContext { get; set; }
         public UpdateGuest(ApplicationDBContext context)
@@ -45,16 +45,19 @@ namespace Hotelapp3.Controller.Guest
             personToUpdate.Name = nameUpdate;
             personToUpdate.Lastname = lastnameUpdate;
             dbContext.SaveChanges();
-            Console.WriteLine("vill du forsätta tryck på (0) om inte tryck på (9)");
-            var num = Convert.ToInt32(Console.ReadLine());
-            if (num == 0)
-            {
-                return;
-            }
-            else if (num == 9)
-            {
-                Console.WriteLine(Mainmenu.ShowMenu());
-            }
+            //Console.WriteLine("vill du forsätta i guest menu tryck på (0) om inte tryck på (9)");
+            //var num = Convert.ToInt32(Console.ReadLine());
+            //if (num == 0)
+            //{
+            //    return;
+            //}
+            //else if (num == 9)
+            //{
+            //    Console.WriteLine(Mainmenu.ShowMenu());
+            //}
+            Console.WriteLine("press any key to continho");
+            Console.ReadLine();
+
         }
     }
 }

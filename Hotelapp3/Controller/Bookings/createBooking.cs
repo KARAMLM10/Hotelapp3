@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Hotelapp3.Controller.Bookings
 {
-    public class createBooking : Interface
+    public class createBooking : Interfaces
     {
         public ApplicationDBContext dbContext { get; set; }
         public createBooking(ApplicationDBContext context)
@@ -177,7 +177,7 @@ namespace Hotelapp3.Controller.Bookings
             Console.WriteLine("här är alla Rooms");
             foreach (var room in dbContext.Room.OrderBy(r => r.Id))
             {
-                Console.WriteLine($"{room.Id} \t{room.Area} \t{room.type}");
+                Console.WriteLine($"{room.Id} \t{room.beds} \t{room.type}");
             }
             Console.WriteLine("Ange id: ");
             var roomid = Convert.ToInt32( Console.ReadLine());
@@ -227,8 +227,19 @@ namespace Hotelapp3.Controller.Bookings
 
             });
             dbContext.SaveChanges();
-
-
+            Console.Clear();
+            //Console.WriteLine("vill du forsätta i booking menu tryck på (0) om inte tryck på (9)");
+            //var num = Convert.ToInt32(Console.ReadLine());
+            //if (num == 0)
+            //{
+            //    return;
+            //}
+            //else if (num == 9)
+            //{
+            //    Console.WriteLine(Mainmenu.ShowMenu());
+            //}
+            Console.WriteLine("press any key to continuo");
+            Console.ReadLine();
             //Console.WriteLine("vill du forsätta tryck på (0) om inte tryck på (9)");
             //var num = Convert.ToInt32(Console.ReadLine());
             //if (num == 0)

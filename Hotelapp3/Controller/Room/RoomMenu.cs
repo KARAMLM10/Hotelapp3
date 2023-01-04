@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotelapp3.Controller
+namespace Hotelapp3.Controller.Room
 {
-    public class RoomMenu : Interface
+    public class RoomMenu : Interfaces
     {
         public ApplicationDBContext dbContext { get; set; }
         public RoomMenu(ApplicationDBContext context)
@@ -21,13 +21,14 @@ namespace Hotelapp3.Controller
         {
             var appbuilder = new appbuilder();
             var DbContext = appbuilder.appBuilder();
-            bool Main = true;
+            //  bool Main = true;
             while (true)
             {
                 Console.WriteLine("1. skapa ny room");
                 Console.WriteLine("2. Read all Rooms");
                 Console.WriteLine("4. Delete en room");
                 Console.WriteLine("3. Update en room");
+                Console.WriteLine("7. gå till mainmenu");
                 var sel = Convert.ToInt32(Console.ReadLine());
 
                 switch (sel)
@@ -48,22 +49,23 @@ namespace Hotelapp3.Controller
                         var action4 = new DeletRoom(DbContext);
                         action4.Run();
                         break;
+
                     default:
                         break;
                 }
-
+                break;
             }
-            List<Interface> actions = new List<Interface>();
+            //List<Interfaces> actions = new List<Interfaces>();
 
-            var c = new createRoom(DbContext);
-            var r = new ReadRoom(DbContext);
-            var u = new UpdateRoom(DbContext);
-            var d = new DeletRoom(DbContext);
+            //var c = new createRoom(DbContext);
+            //var r = new ReadRoom(DbContext);
+            //var u = new UpdateRoom(DbContext);
+            //var d = new DeletRoom(DbContext);
 
-            actions.Add(c);
-            actions.Add(r);
-            actions.Add(u);
-            actions.Add(d);
+            //actions.Add(c);
+            //actions.Add(r);
+            //actions.Add(u);
+            //actions.Add(d);
         }
 
     }

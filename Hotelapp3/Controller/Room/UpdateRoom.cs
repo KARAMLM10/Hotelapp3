@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hotelapp3.Controller.Room
 {
-    public class UpdateRoom : Interface
+    public class UpdateRoom : Interfaces
     {
         public ApplicationDBContext dbContext { get; set; }
         public UpdateRoom(ApplicationDBContext context)
@@ -32,22 +32,25 @@ namespace Hotelapp3.Controller.Room
             Console.WriteLine("Ange nya type: ");
             var typeUpdate = Console.ReadLine();
 
-            Console.WriteLine("Ange nya Area: ");
+            Console.WriteLine("Ange nya beds: ");
             var areaUpdate = Console.ReadLine();
 
             roomToUpdate.type = typeUpdate;
-            roomToUpdate.Area = areaUpdate;
+            roomToUpdate.beds = areaUpdate;
             dbContext.SaveChanges();
-            Console.WriteLine("vill du forsätta tryck på (0) om inte tryck på (9)");
-            var num = Convert.ToInt32(Console.ReadLine());
-            if (num == 0)
-            {
-                return;
-            }
-            else if (num == 9)
-            {
-                Console.WriteLine(Mainmenu.ShowMenu());
-            }
+            //Console.WriteLine("vill du forsätta i Room menu tryck på (0) om inte tryck på (9)");
+            //var num = Convert.ToInt32(Console.ReadLine());
+            //if (num == 0)
+            //{
+            //    return;
+            //}
+            //else if (num == 9)
+            //{
+            //    Console.WriteLine(Mainmenu.ShowMenu());
+            //}
+            Console.WriteLine("press any key to continho");
+            Console.ReadLine();
+
 
         }
 

@@ -1,5 +1,7 @@
 ﻿using Hotelapp3.Controller;
+using Hotelapp3.Controller.Bookings;
 using Hotelapp3.Controller.Guest;
+using Hotelapp3.Controller.Room;
 using Hotelapp3.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -27,27 +29,23 @@ namespace Hotelapp3
                 switch (sel)
                 {
                     case 1:
-                        var action = new GuestMenu(DbContext);
-                        action.Run();
+                        var action1 = new GuestMenu(DbContext);
+                        action1.Run();
                         break;
                     case 2:
-                        var action1 = new BookingMenu(DbContext);
-                        action1.Run();
+                        var action2 = new BookingMenu(DbContext);
+                        action2.Run();
                         break;
                     case 3:
                         var action3 = new RoomMenu(DbContext);
                         action3.Run();
                         break;
-                    //case 4:
-                    //var action4 = new DeletGuest(DbContext);
-                    //action4.Run();
-                    //break;
-                    case 0:
-                        break;
+                    
+                   
                     default:
                         break;
                 }
-                break;
+                
             }
            
 

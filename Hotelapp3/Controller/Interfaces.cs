@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hotelapp3.Controller
 {
-    public interface Interface
+    public interface Interfaces
     {
         public void Run();
     }

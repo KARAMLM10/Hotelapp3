@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hotelapp3.Controller.Guest
 {
-    public class DeletGuest : Interface
+    public class DeletGuest : Interfaces
     {
         public ApplicationDBContext dbContext { get; set; }
         public DeletGuest(ApplicationDBContext context)
@@ -32,17 +32,20 @@ namespace Hotelapp3.Controller.Guest
             var personToDelete = dbContext.Guest.First(p => p.Id == personIdToDelete);
             dbContext.Guest.Remove(personToDelete);
             dbContext.SaveChanges();
-            Console.WriteLine("vill du forsätta tryck på (0) om inte tryck på (9)");
-            var num = Convert.ToInt32(Console.ReadLine());
-            if (num == 0)
-            {
-                return;
-            }
-            else if (num == 9)
-            {
-                Console.Clear();
-                Console.WriteLine(Mainmenu.ShowMenu());
-            }
+            //Console.WriteLine("vill du forsätta i guest menu tryck på (0) om inte tryck på (9)");
+            //var num = Convert.ToInt32(Console.ReadLine());
+            //if (num == 0)
+            //{
+            //    return;
+            //}
+            //else if (num == 9)
+            //{
+            //    Console.Clear();
+            //    Console.WriteLine(Mainmenu.ShowMenu());
+            //}
+            Console.WriteLine("press any key to continho");
+            Console.ReadLine();
+
         }
     }
 }

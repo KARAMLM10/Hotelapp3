@@ -62,39 +62,39 @@ namespace Hotelapp3.Data
         }
         private void SeedRooms(ApplicationDBContext dBContext)
         {
-            if (!dBContext.Room.Any(c => c.type == "Dubbelsäng1"))
+            if (!dBContext.Room.Any(c => c.type == "Dubbelsäng1-area 30"))
             {
                 dBContext.Room.Add(new Room
                 {
-                    type="Dubbelsäng1",
-                    Area="30"
+                    type="Dubbelsäng1-area 30",
+                    beds="2"
                 });
             }
 
-            if (!dBContext.Room.Any(c => c.type == "Dubbelsäng2"))
+            if (!dBContext.Room.Any(c => c.type == "Dubbelsäng2-area37"))
             {
                 dBContext.Room.Add(new Room
                 {
-                    type = "Dubbelsäng2",
-                    Area = "37"
+                    type = "Dubbelsäng2-area37",
+                    beds = "2"
                 });
             }
 
-            if (!dBContext.Room.Any(c => c.type == "singelsäng1"))
+            if (!dBContext.Room.Any(c => c.type == "singelsäng1-area20"))
             {
                 dBContext.Room.Add(new Room
                 {
-                    type = "singelsäng1",
-                    Area = "20"
+                    type = "singelsäng1-area20",
+                    beds = "1"
                 });
             }
 
-            if (!dBContext.Room.Any(c => c.type == "singelsäng2"))
+            if (!dBContext.Room.Any(c => c.type == "singelsäng2-area27"))
             {
                 dBContext.Room.Add(new Room
                 {
-                    type = "singelsäng2",
-                    Area = "27"
+                    type = "singelsäng2-area27",
+                    beds = "1"
                 });
             }
 

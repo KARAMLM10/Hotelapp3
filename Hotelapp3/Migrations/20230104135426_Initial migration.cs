@@ -31,7 +31,7 @@ namespace Hotelapp3.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     type = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Area = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    beds = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
