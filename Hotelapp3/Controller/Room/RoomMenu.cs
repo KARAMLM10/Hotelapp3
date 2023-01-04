@@ -28,7 +28,6 @@ namespace Hotelapp3.Controller.Room
                 Console.WriteLine("2. Read all Rooms");
                 Console.WriteLine("4. Delete en room");
                 Console.WriteLine("3. Update en room");
-                Console.WriteLine("7. gå till mainmenu");
                 var sel = Convert.ToInt32(Console.ReadLine());
 
                 switch (sel)
