@@ -1,0 +1,19 @@
+--select*from  Guest g 
+--Inner Join 
+--Booking b on b.BookingId=g.GuestId
+--Inner Join 
+--Room r on r.RoomId=g.GuestId
+--order by
+--g.GuestId
+--select*from Booking
+/*select*from  Guest*/
+/*select*from Guest where Name ='angel' order by Id*/
+--select*from Guest
+--select g.GuestId
+--from Booking g
+--select*from Room 
+
+--select*from Booking b 
+--inner join Guest g on b.GuestId = g.GuestId
+--select*from Guest where Age = 28
+--select*from Room order by beds
