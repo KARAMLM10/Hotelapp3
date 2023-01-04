@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotelapp3.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20230104135505_Column added to Room")]
-    partial class ColumnaddedtoRoom
+    [Migration("20230104202723_Added column to Booking")]
+    partial class AddedcolumntoBooking
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,11 +26,11 @@ namespace Hotelapp3.Migrations
 
             modelBuilder.Entity("Hotelapp3.Data.Booking", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("BookingId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingId"), 1L, 1);
 
                     b.Property<DateTime>("DateEnd")
                         .HasColumnType("datetime2");
@@ -44,7 +44,7 @@ namespace Hotelapp3.Migrations
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("BookingId");
 
                     b.HasIndex("GuestId");
 
@@ -55,11 +55,11 @@ namespace Hotelapp3.Migrations
 
             modelBuilder.Entity("Hotelapp3.Data.Guest", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("GuestId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GuestId"), 1L, 1);
 
                     b.Property<int>("Age")
                         .HasColumnType("int");
@@ -74,18 +74,18 @@ namespace Hotelapp3.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.HasKey("Id");
+                    b.HasKey("GuestId");
 
                     b.ToTable("Guest");
                 });
 
             modelBuilder.Entity("Hotelapp3.Data.Room", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("RoomId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoomId"), 1L, 1);
 
                     b.Property<string>("beds")
                         .IsRequired()
@@ -96,7 +96,7 @@ namespace Hotelapp3.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.HasKey("Id");
+                    b.HasKey("RoomId");
 
                     b.ToTable("Room");
                 });

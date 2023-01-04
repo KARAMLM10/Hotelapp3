@@ -21,14 +21,14 @@ namespace Hotelapp3.Controller.Guest
             Console.WriteLine("ändra befintlig person");
             foreach (var person in dbContext.Guest)
             {
-                Console.WriteLine($"Id: {person.Id}");
+                Console.WriteLine($"Id: {person.GuestId}");
                 Console.WriteLine($"Namn: {person.Name}");
                 Console.WriteLine("====================");
             }
 
             Console.WriteLine("Välj Id på den Person som du vill uppdatera");
             var personIdToUpdate = Convert.ToInt32(Console.ReadLine());
-            var personToUpdate = dbContext.Guest.First(p => p.Id == personIdToUpdate);
+            var personToUpdate = dbContext.Guest.First(p => p.GuestId == personIdToUpdate);
             Console.Clear();
 
             Console.WriteLine("Ange nya namn: ");

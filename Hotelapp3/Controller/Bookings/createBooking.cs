@@ -175,9 +175,9 @@ namespace Hotelapp3.Controller.Bookings
             Console.WriteLine("vilken rum vill du boka?");
             Console.WriteLine("=====================");
             Console.WriteLine("här är alla Rooms");
-            foreach (var room in dbContext.Room.OrderBy(r => r.Id))
+            foreach (var room in dbContext.Room.OrderBy(r => r.RoomId))
             {
-                Console.WriteLine($"{room.Id} \t{room.beds} \t{room.type}");
+                Console.WriteLine($"{room.RoomId} \t{room.beds} \t{room.type}");
             }
             Console.WriteLine("Ange id: ");
             var roomid = Convert.ToInt32( Console.ReadLine());
@@ -194,9 +194,9 @@ namespace Hotelapp3.Controller.Bookings
             //dbContext.SaveChanges();
 
             Console.WriteLine("här är alla Guests");
-            foreach (var guest in dbContext.Guest.OrderBy(x => x.Id))
+            foreach (var guest in dbContext.Guest.OrderBy(x => x.GuestId))
             {
-                Console.WriteLine($"{guest.Id} \t {guest.Name} \t{guest.Lastname} \r{guest.Age}");
+                Console.WriteLine($"{guest.GuestId} \t {guest.Name} \t{guest.Lastname} \r{guest.Age}");
             }
             Console.WriteLine("ange guest id");
             var guestid = Convert.ToInt32(Console.ReadLine());

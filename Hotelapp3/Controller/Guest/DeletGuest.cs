@@ -21,7 +21,7 @@ namespace Hotelapp3.Controller.Guest
             Console.WriteLine("Ta bort en person, vilken ?");
             foreach (var person in dbContext.Guest)
             {
-                Console.WriteLine($"Id: {person.Id}");
+                Console.WriteLine($"Id: {person.GuestId}");
                 Console.WriteLine($"Namn: {person.Name}");
                 Console.WriteLine("====================");
 
@@ -29,7 +29,7 @@ namespace Hotelapp3.Controller.Guest
 
             Console.WriteLine("Välj Id på den Person som du vill radera");
             var personIdToDelete = Convert.ToInt32(Console.ReadLine());
-            var personToDelete = dbContext.Guest.First(p => p.Id == personIdToDelete);
+            var personToDelete = dbContext.Guest.First(p => p.GuestId == personIdToDelete);
             dbContext.Guest.Remove(personToDelete);
             dbContext.SaveChanges();
             //Console.WriteLine("vill du forsätta i guest menu tryck på (0) om inte tryck på (9)");

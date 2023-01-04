@@ -10,7 +10,7 @@ namespace Hotelapp3.Data
     public class Room
     {
         [Key]
-        public int Id { get; set; }
+        public int RoomId { get; set; }
         [Required]
         [MaxLength(100)]
         public string type { get; set; }

@@ -21,13 +21,13 @@ namespace Hotelapp3.Controller.Room
             Console.WriteLine("ändra befintlig room");
             foreach (var room in dbContext.Room)
             {
-                Console.WriteLine($"id: {room.Id}");
+                Console.WriteLine($"id: {room.RoomId}");
                 //Console.WriteLine($"Area: {room.Area}");
                 Console.WriteLine("====================");
             }
             Console.WriteLine("Välj Id på den room som du vill uppdatera");
             var roomIdToUpdate = Convert.ToInt32(Console.ReadLine());
-            var roomToUpdate = dbContext.Room.First(p => p.Id == roomIdToUpdate);
+            var roomToUpdate = dbContext.Room.First(p => p.RoomId == roomIdToUpdate);
             Console.Clear();
             Console.WriteLine("Ange nya type: ");
             var typeUpdate = Console.ReadLine();

@@ -11,7 +11,7 @@ namespace Hotelapp3.Data
     public class Booking
     {
         [Key]
-        public int Id { get; set; }
+        public int BookingId { get; set; }
 
         public Room Room { get; set; }
         public int RoomId { get; set; }

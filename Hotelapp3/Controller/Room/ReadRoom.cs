@@ -24,7 +24,7 @@ namespace Hotelapp3.Controller.Room
             Console.WriteLine("här är alla Rooms");
             foreach (var room in dbContext.Room.OrderBy(r => r.type))
             {
-                Console.WriteLine($"{room.Id} \t{room.beds} \t{room.type}");
+                Console.WriteLine($"{room.RoomId} \t{room.beds} \t{room.type}");
                 
 
             }
