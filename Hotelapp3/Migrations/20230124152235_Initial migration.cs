@@ -13,7 +13,7 @@ namespace Hotelapp3.Migrations
                 name: "Guest",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    GuestId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Lastname = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
@@ -21,7 +21,7 @@ namespace Hotelapp3.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Guest", x => x.Id);
+                    table.PrimaryKey("PK_Guest", x => x.GuestId);
                 });
 
             migrationBuilder.CreateTable(
@@ -42,7 +42,7 @@ namespace Hotelapp3.Migrations
                 name: "Booking",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    BookingId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoomId = table.Column<int>(type: "int", nullable: false),
                     GuestId = table.Column<int>(type: "int", nullable: false),
@@ -51,12 +51,12 @@ namespace Hotelapp3.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Booking", x => x.Id);
+                    table.PrimaryKey("PK_Booking", x => x.BookingId);
                     table.ForeignKey(
                         name: "FK_Booking_Guest_GuestId",
                         column: x => x.GuestId,
                         principalTable: "Guest",
-                        principalColumn: "Id",
+                        principalColumn: "GuestId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Booking_Room_RoomId",

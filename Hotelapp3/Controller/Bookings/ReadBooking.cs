@@ -30,8 +30,8 @@ namespace Hotelapp3.Controller.Bookings
             {
                 var guest = dbContext.Guest.FirstOrDefault(x => x.GuestId.Equals(bok.GuestId));
                 var room = dbContext.Room.FirstOrDefault(x => x.RoomId.Equals(bok.RoomId));
-                Console.WriteLine($"\t {bok.DateStart} \t {bok.DateEnd} \t{bok.GuestId} "
-                   + $"\t{bok.RoomId} \t{guest.Name} \t{room.type} "); 
+                Console.WriteLine($"  \nBooking ID \t{bok.BookingId} \n Booking Date Start \t {bok.DateStart} \n Booking Date End \t {bok.DateEnd} \n Booking Guest ID \t{bok.GuestId} "
+                   + $" \n Booking Room ID \t{bok.RoomId} \n Guest Name \t{guest.Name} \n Room Type \t{room.type} "); 
             }
             Console.WriteLine("press any key to countino");
             Console.ReadLine();

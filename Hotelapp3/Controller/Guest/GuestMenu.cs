@@ -26,10 +26,13 @@ namespace Hotelapp3.Controller.Guest
             while (true)
 
             {
-                Console.WriteLine("1. skapa ny guest");
+                Console.Clear();
+                Console.WriteLine("Guest Menu Site");
+                Console.WriteLine("=====================");
+                Console.WriteLine("1. Create new Guest");
                 Console.WriteLine("2. Read all Guests");
-                Console.WriteLine("4. Delete en Guests");
-                Console.WriteLine("3. Update en Guest");
+                Console.WriteLine("3. Update Guest");
+                Console.WriteLine("4. Delete Guest");
 
                 var sel = Convert.ToInt32(Console.ReadLine());
 

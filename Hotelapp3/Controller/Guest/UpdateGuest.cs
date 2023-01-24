@@ -17,27 +17,30 @@ namespace Hotelapp3.Controller.Guest
         public void Run()
         {
             Console.Clear();
-
-            Console.WriteLine("ändra befintlig person");
+            Console.WriteLine("Guest Update Site");
+            Console.WriteLine("======================");
+            Console.WriteLine("Ändra befintlig person");
             foreach (var person in dbContext.Guest)
             {
-                Console.WriteLine($"Id: {person.GuestId}");
-                Console.WriteLine($"Namn: {person.Name}");
+                Console.WriteLine($"Guest ID: {person.GuestId}");
+                Console.WriteLine($"Guest Namn: {person.Name}");
+                Console.WriteLine($"Guest Last Name {person.Lastname}");
+                Console.WriteLine($"Guest Age {person.Age}");
                 Console.WriteLine("====================");
             }
 
-            Console.WriteLine("Välj Id på den Person som du vill uppdatera");
+            Console.WriteLine("Välj ID på den Person du vill uppdatera");
             var personIdToUpdate = Convert.ToInt32(Console.ReadLine());
             var personToUpdate = dbContext.Guest.First(p => p.GuestId == personIdToUpdate);
             Console.Clear();
 
-            Console.WriteLine("Ange nya namn: ");
+            Console.WriteLine("Ange den nya namn: ");
             var nameUpdate = Console.ReadLine();
 
-            Console.WriteLine("Ange nya Lastname: ");
+            Console.WriteLine("Ange den nya efternamn: ");
             var lastnameUpdate = Console.ReadLine();
 
-            Console.WriteLine("Ange nya Age: ");
+            Console.WriteLine("Ange den nya ålder: ");
             var ageUpdate = Convert.ToInt32(Console.ReadLine());
 
 

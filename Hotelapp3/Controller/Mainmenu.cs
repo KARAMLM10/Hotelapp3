@@ -11,6 +11,9 @@ namespace Hotelapp3.Controller
         
             public static int ShowMenu()
             {
+              Console.Clear();
+                Console.WriteLine("Här är Main Menu Site.");
+                 Console.WriteLine("=========================");
                 Console.WriteLine("1:Guest Menu");
                 Console.WriteLine("2:Booking Menu");
                 Console.WriteLine("3:Room Menu");

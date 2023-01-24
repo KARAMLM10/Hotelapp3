@@ -21,10 +21,10 @@ namespace Hotelapp3.Controller.Room
         {
             Console.Clear();
             
-            Console.WriteLine("här är alla Rooms");
+            Console.WriteLine("Här är alla Rooms");
             foreach (var room in dbContext.Room.OrderBy(r => r.type))
             {
-                Console.WriteLine($"{room.RoomId} \t{room.beds} \t{room.type}");
+                Console.WriteLine($" \n Room ID {room.RoomId} \n Room Beds \t{room.beds} \n Room Type \t{room.type}");
                 
 
             }

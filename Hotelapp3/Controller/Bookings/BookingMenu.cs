@@ -26,8 +26,11 @@ namespace Hotelapp3.Controller.Bookings
             // bool Main = true;
             while (true)
             {
-                Console.WriteLine("1- Booka ett Rum");
-                Console.WriteLine("2- read all bokings");
+                Console.Clear();
+                Console.WriteLine("Booking Menu Site");
+                Console.WriteLine("==================");
+                Console.WriteLine("1- Book a Room");
+                Console.WriteLine("2- Read all bookings");
                 var sel = Convert.ToInt32(Console.ReadLine());
                 switch (sel)
                 {

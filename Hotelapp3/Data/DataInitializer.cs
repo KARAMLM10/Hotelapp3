@@ -20,7 +20,7 @@ namespace Hotelapp3.Data
         }
         private void SeedGuests(ApplicationDBContext dBContext)
         {
-            if (!dBContext.Guest.Any(c => c.Name == "leo"))
+            if (!dBContext.Guest.Any(c => c.GuestId == 1))
             {
                 dBContext.Guest.Add(new Guest
                 {
@@ -30,7 +30,7 @@ namespace Hotelapp3.Data
                 });
             }
 
-            if (!dBContext.Guest.Any(c => c.Name == "angel"))
+            if (!dBContext.Guest.Any(c => c.GuestId == 2))
             {
                 dBContext.Guest.Add(new Guest 
                 {
@@ -40,7 +40,7 @@ namespace Hotelapp3.Data
                 });
             }
 
-            if (!dBContext.Guest.Any(c => c.Name == "David"))
+            if (!dBContext.Guest.Any(c => c.GuestId == 3))
             {
                 dBContext.Guest.Add(new Guest
                 {
@@ -49,7 +49,7 @@ namespace Hotelapp3.Data
                     Age=24
                 });
             }
-            if (!dBContext.Guest.Any(c => c.Name == "julian"))
+            if (!dBContext.Guest.Any(c => c.GuestId == 4))
             {
                 dBContext.Guest.Add(new Guest
                 {
@@ -62,38 +62,38 @@ namespace Hotelapp3.Data
         }
         private void SeedRooms(ApplicationDBContext dBContext)
         {
-            if (!dBContext.Room.Any(c => c.type == "Dubbelsäng1-area 30"))
+            if (!dBContext.Room.Any(c => c.RoomId == 1))
             {
                 dBContext.Room.Add(new Room
                 {
-                    type="Dubbelsäng1-area 30",
+                    type= "Double Beds (1) -area 30",
                     beds="2"
                 });
             }
 
-            if (!dBContext.Room.Any(c => c.type == "Dubbelsäng2-area37"))
+            if (!dBContext.Room.Any(c => c.RoomId == 2))
             {
                 dBContext.Room.Add(new Room
                 {
-                    type = "Dubbelsäng2-area37",
+                    type = "Double Beds (2)-area 37",
                     beds = "2"
                 });
             }
 
-            if (!dBContext.Room.Any(c => c.type == "singelsäng1-area20"))
+            if (!dBContext.Room.Any(c => c.RoomId == 3))
             {
                 dBContext.Room.Add(new Room
                 {
-                    type = "singelsäng1-area20",
+                    type = "Single Bed (1)-area 20",
                     beds = "1"
                 });
             }
 
-            if (!dBContext.Room.Any(c => c.type == "singelsäng2-area27"))
+            if (!dBContext.Room.Any(c => c.RoomId == 4))
             {
                 dBContext.Room.Add(new Room
                 {
-                    type = "singelsäng2-area27",
+                    type = "Single Bed (2)-area 27",
                     beds = "1"
                 });
             }

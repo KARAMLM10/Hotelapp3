@@ -18,19 +18,20 @@ namespace Hotelapp3.Controller.Room
         public void Run()
         {
             Console.Clear();
-
+            Console.WriteLine("Delet Room");
+            Console.WriteLine("===================");
             Console.WriteLine("Ta bort Ett Room, vilken ?");
             foreach (var room in dbContext.Room)
             {
-                Console.WriteLine($"type: {room.type}");
-                Console.WriteLine($"beds: {room.beds}");
+                Console.WriteLine($"Room ID: {room.RoomId}");
+                Console.WriteLine($"Room type: {room.type}");
+                Console.WriteLine($"Room beds: {room.beds}");
                 Console.WriteLine("====================");
-
             }
 
-            Console.WriteLine("Välj Id på det room som du vill radera");
-            var roomtypeToDelete = Console.ReadLine();
-            var roomToDelete = dbContext.Room.First(p => p.type == roomtypeToDelete);
+            Console.WriteLine("Välj ID på det Rum du vill radera");
+            var roomidToDelete = Convert.ToInt32( Console.ReadLine());
+            var roomToDelete = dbContext.Room.First(p => p.RoomId == roomidToDelete);
             dbContext.Room.Remove(roomToDelete);
             dbContext.SaveChanges();
             //Console.WriteLine("vill du forsätta i Room menu tryck på (0) om inte tryck på (9)");

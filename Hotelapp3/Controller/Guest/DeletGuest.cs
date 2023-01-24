@@ -21,13 +21,15 @@ namespace Hotelapp3.Controller.Guest
             Console.WriteLine("Ta bort en person, vilken ?");
             foreach (var person in dbContext.Guest)
             {
-                Console.WriteLine($"Id: {person.GuestId}");
-                Console.WriteLine($"Namn: {person.Name}");
+                Console.WriteLine($"Guest ID: {person.GuestId}");
+                Console.WriteLine($"Guest Namn: {person.Name}");
+                Console.WriteLine($"Guest Last Name {person.Lastname}");
+                Console.WriteLine($"Guest Age {person.Age}");
                 Console.WriteLine("====================");
 
             }
 
-            Console.WriteLine("Välj Id på den Person som du vill radera");
+            Console.WriteLine("Välj ID på den Person du vill radera");
             var personIdToDelete = Convert.ToInt32(Console.ReadLine());
             var personToDelete = dbContext.Guest.First(p => p.GuestId == personIdToDelete);
             dbContext.Guest.Remove(personToDelete);

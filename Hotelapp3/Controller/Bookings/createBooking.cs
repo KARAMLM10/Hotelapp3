@@ -171,13 +171,14 @@ namespace Hotelapp3.Controller.Bookings
 
             //});
             // dbContext.SaveChanges();
-
-            Console.WriteLine("vilken rum vill du boka?");
+            Console.WriteLine("Create Booking Site");
+            Console.WriteLine("=======================");
+            Console.WriteLine("vilken Rum vill du boka?");
             Console.WriteLine("=====================");
-            Console.WriteLine("här är alla Rooms");
+            Console.WriteLine("Here is all Rooms");
             foreach (var room in dbContext.Room.OrderBy(r => r.RoomId))
             {
-                Console.WriteLine($"{room.RoomId} \t{room.beds} \t{room.type}");
+                Console.WriteLine($" \n Room ID {room.RoomId} \n Room beds \t{room.beds} \n Room Type \t{room.type}");
             }
             Console.WriteLine("Ange id: ");
             var roomid = Convert.ToInt32( Console.ReadLine());
@@ -193,17 +194,17 @@ namespace Hotelapp3.Controller.Bookings
             //});
             //dbContext.SaveChanges();
 
-            Console.WriteLine("här är alla Guests");
+            Console.WriteLine("Here is all Guests");
             foreach (var guest in dbContext.Guest.OrderBy(x => x.GuestId))
             {
-                Console.WriteLine($"{guest.GuestId} \t {guest.Name} \t{guest.Lastname} \r{guest.Age}");
+                Console.WriteLine($" \n Guest ID {guest.GuestId} \n Guest Name \t {guest.Name} \n Guest Last Name \t{guest.Lastname} \n Guest Age \t{guest.Age}");
             }
-            Console.WriteLine("ange guest id");
+            Console.WriteLine("ange Guest ID");
             var guestid = Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine("ange guest name");
             //var guestname= Console.ReadLine();
            Console.Clear();
-            Console.WriteLine(" How many days would you like to book the room?");
+            Console.WriteLine(" Hur många dagar vill du boka rummet?");
             int numberOfDays = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Mata in start datum yyyy-MM-dd: ");

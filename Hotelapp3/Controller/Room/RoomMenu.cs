@@ -24,10 +24,14 @@ namespace Hotelapp3.Controller.Room
             //  bool Main = true;
             while (true)
             {
-                Console.WriteLine("1. skapa ny room");
+                Console.Clear();
+                Console.WriteLine("Room Menu Site");
+                Console.WriteLine("========================");
+                Console.WriteLine("1. Create new room");
                 Console.WriteLine("2. Read all Rooms");
-                Console.WriteLine("4. Delete en room");
-                Console.WriteLine("3. Update en room");
+                Console.WriteLine("3. Update room");
+                Console.WriteLine("4. Delete room");
+
                 var sel = Convert.ToInt32(Console.ReadLine());
 
                 switch (sel)

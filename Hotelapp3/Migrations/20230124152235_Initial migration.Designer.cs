@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotelapp3.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20230104202028_Added column to Guest")]
-    partial class AddedcolumntoGuest
+    [Migration("20230124152235_Initial migration")]
+    partial class Initialmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,11 +26,11 @@ namespace Hotelapp3.Migrations
 
             modelBuilder.Entity("Hotelapp3.Data.Booking", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("BookingId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingId"), 1L, 1);
 
                     b.Property<DateTime>("DateEnd")
                         .HasColumnType("datetime2");
@@ -44,7 +44,7 @@ namespace Hotelapp3.Migrations
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("BookingId");
 
                     b.HasIndex("GuestId");
 

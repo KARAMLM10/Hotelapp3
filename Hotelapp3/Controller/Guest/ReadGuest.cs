@@ -18,7 +18,7 @@ namespace Hotelapp3.Controller.Guest
         public void Run()
         {
             Console.Clear();
-            Console.WriteLine("här är alla Guests");
+            Console.WriteLine("Här är alla Guests");
             //foreach(var guest in dbContext.Guest.Include(g=>g.Name))
             //{
             //    Console.WriteLine(guest.Name);
@@ -28,7 +28,7 @@ namespace Hotelapp3.Controller.Guest
             //}
             foreach(var guest in dbContext.Guest.OrderBy(x => x.GuestId))
             {
-                Console.WriteLine($"{guest.GuestId} \t {guest.Name} \t{guest.Lastname} \r{guest.Age}");
+                Console.WriteLine($"\n Guest ID {guest.GuestId} \n Guest Name \t {guest.Name} \n Guest Last Name \t{guest.Lastname} \n Guest Age \t {guest.Age}");
             }
 
             //Console.WriteLine("vill du forsätta i guest menu tryck på (0) om inte tryck på (9)");

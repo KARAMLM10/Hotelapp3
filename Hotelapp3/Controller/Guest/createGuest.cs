@@ -24,12 +24,12 @@ namespace Hotelapp3.Controller.Guest
 
             Console.WriteLine("1- CREATE en ny person");
             Console.WriteLine("=====================");
-             Console.WriteLine("Ange namn: ");
+             Console.WriteLine("Ange Namn: ");
              var nameInput = Console.ReadLine();
-            Console.WriteLine("Ange efternamn: ");
+            Console.WriteLine("Ange Efternamn: ");
             var LastnameInput = Console.ReadLine();
 
-            Console.WriteLine("Ange ålder: ");
+            Console.WriteLine("Ange Ålder: ");
              var ageInput = Convert.ToInt32(Console.ReadLine());
            
             

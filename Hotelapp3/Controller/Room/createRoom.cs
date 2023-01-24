@@ -16,12 +16,12 @@ namespace Hotelapp3.Controller.Room
         }
         public void Run()
         {
-
+            Console.Clear();
             Console.WriteLine("1- CREATE en ny Room");
             Console.WriteLine("=====================");
-            Console.WriteLine("Ange type: ");
+            Console.WriteLine("Ange type Namn: ");
             var typeInput = Console.ReadLine();
-            Console.WriteLine("Ange beds: ");
+            Console.WriteLine("Ange antal Sängar: ");
             var areaInput = Console.ReadLine();
 
             dbContext.Room.Add(new Data.Room
